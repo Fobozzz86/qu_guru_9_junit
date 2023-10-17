@@ -1,11 +1,8 @@
 package com.fobozzz;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Disabled;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
-//@Disabled ("Можно вставить id Bug") // можно вставить над классом что отключить все тесты на какую нить функциональность
+//@Disabled ("Можно вставить id Bug из Jira") // можно вставить над классом что отключить все тесты на какую нить функциональность
 @DisplayName ("Демо тесты")
 public class SimpleTest {
 
@@ -16,7 +13,7 @@ public class SimpleTest {
     }
 
     @Test
-    @Disabled ("Можно вставить id Bug")
+    @Disabled ("Можно вставить id Bug из Jira")
     @DisplayName("Демо тест для печати")
     void printTest(){
         System.out.println("Тест Disable");

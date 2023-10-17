@@ -19,3 +19,11 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+/*test { // запуск тестов по тегу
+    useJUnitPlatform {
+        if (project.hasProperty("includeTags")) {
+            includeTags(project.property("includeTags") as String)
+        }
+    }
+}*/
