@@ -1,11 +1,15 @@
 package com.fobozzz;
 
+import com.fobozzz.domain.Locale;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvFileSource;
-import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.*;
+
+import java.util.List;
+import java.util.stream.Stream;
 
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 
 public class ParametrizeTest extends TestBase {
@@ -14,7 +18,7 @@ public class ParametrizeTest extends TestBase {
         open("");
     }
     @CsvSource(value = {
-            "selenide |, https://ru.selenide.org",
+            "selenide | https://ru.selenide.org",
             "JUnit | https://junit.org"
     },
     delimiter = '|') // использование выбранного разделителя, если например в ТД есть запятая
@@ -29,4 +33,3 @@ public class ParametrizeTest extends TestBase {
         $("[id=search]").shouldHave(text(expextedUrl));
     }
 }
-
